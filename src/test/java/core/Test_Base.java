@@ -29,10 +29,10 @@ public class Test_Base {
 		String browser = getBrowserName();
 		try {
 			//driver = new ChromeDriver();
-			driver = WebDriverFactory.getWebDriverForbrowser("browser");
+			driver = WebDriverFactory.getWebDriverForbrowser(browser);
 		} catch (Exception e) {
 			e.printStackTrace();
-			Assert.fail("Incorrect Browser Sent. Check the Stack Trace");
+			Assert.fail("Browser Initialization failed. Check the Stack Trace. " + e.getMessage());
 			
 		}
 		
